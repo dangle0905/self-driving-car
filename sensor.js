@@ -25,11 +25,15 @@ class Sensor{
         }
     }
 
+    
+
     //get collision detection
     #getReading(ray,roadBorders,traffic){
         let touches=[];
 
+
         for(let i=0;i<roadBorders.length;i++){
+            //get the intersection where it touches
             const touch=getIntersection(
                 ray[0],
                 ray[1],

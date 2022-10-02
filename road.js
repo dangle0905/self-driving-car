@@ -1,4 +1,5 @@
 class Road{
+    //constructor of road has, 
     constructor(x,width,laneCount=3){
         this.x=x;
         this.width=width;
@@ -21,12 +22,14 @@ class Road{
         ];
     }
 
+    //get the the center of the lane
     getLaneCenter(laneIndex){
         const laneWidth=this.width/this.laneCount;
         return this.left+laneWidth/2+
             Math.min(laneIndex,this.laneCount-1)*laneWidth;
     }
 
+    //render the contents
     draw(ctx){
         ctx.lineWidth=5;
         ctx.strokeStyle="white";

@@ -1,5 +1,5 @@
 class Car{
-    constructor(x,y,width,height,controlType,maxSpeed=3,color="blue"){
+    constructor(x,y,width,height,controlType,maxSpeed=3,color="silver"){
         this.x=x;
         this.y=y;
         this.width=width;
@@ -56,6 +56,7 @@ class Car{
             const offsets=this.sensor.readings.map(
                 s=>s==null?0:1-s.offset
             );
+
             const outputs=NeuralNetwork.feedForward(offsets,this.brain);
 
             if(this.useBrain){
@@ -67,6 +68,7 @@ class Car{
         }
     }
 
+    //hashes in front of functions means they are private functions of the class
     #assessDamage(roadBorders,traffic){
         for(let i=0;i<roadBorders.length;i++){
             if(polysIntersect(this.polygon,roadBorders[i])){
@@ -81,6 +83,7 @@ class Car{
         return false;
     }
 
+    //created point of the cars so we can have collision detection
     #createPolygon(){
         const points=[];
         const rad=Math.hypot(this.width,this.height)/2;
