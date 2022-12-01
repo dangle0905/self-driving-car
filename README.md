@@ -7,3 +7,5 @@ Using raycasting as five sensors that will take input and go through a neural ne
 Try to teach the car first with one car and then saved the results. </br>
 Increase the amount of cars next and repeat the same steps </br>
 Eventually the neural network will learn from it and drive around the cars </br>
+
+ ![](https://github.com/dangle0905/devportfolio/blob/master/images/selfdrivingcar.gif)
